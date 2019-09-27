@@ -5,7 +5,6 @@
  */
 package main;
 
-import view.Teste;
 import view.ViewLogin;
 import view.base.ViewBase;
 /**
@@ -19,15 +18,22 @@ public class Run {
      */
     public static void main(String[] args) {
         
-        ViewLogin telaLogin = new ViewLogin();
-        telaLogin.setVisible(true);
-        telaLogin.setLocationRelativeTo(null);
-        telaLogin.setTitle("Condom Easy");
-        ViewBase viewCadastroBase =  new ViewBase();
-//        viewCadastroBase.setVisible(true);
-//        viewCadastroBase.setLocationRelativeTo(null);
-//        viewCadastroBase.setTitle("Base Cadastro");
+        runViewLogin();
+        //runViewBase();
         
     }
     
+    public static void runViewLogin(){
+        ViewLogin telaLogin = new ViewLogin();
+        telaLogin.setVisible(true);
+        telaLogin.setLocationRelativeTo(null);
+        telaLogin.setTitle("Condom Easy");     
+    }
+    
+    public static void runViewBase(){
+        ViewBase viewBase =  new ViewBase();
+        viewBase.setVisible(true);
+        viewBase.setLocationRelativeTo(null);
+        viewBase.setTitle("Base Cadastro");
+    }
 }

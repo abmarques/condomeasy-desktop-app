@@ -12,8 +12,8 @@ package view.base;
 public class ViewBase extends javax.swing.JFrame {
 
     
-    int xMouse;
-    int yMouse;
+    private int xMouse;
+    private int yMouse;
     
     public ViewBase() {
         initComponents();

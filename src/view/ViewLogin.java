@@ -20,10 +20,13 @@ import view.viewRecuperarSenha;
  * @author brasileiro
  */
 public class ViewLogin extends javax.swing.JFrame{
-
+    
     /**
      * Creates new form ViewLogin
      */
+    private int xMouse;
+    private int yMouse;
+    
     public ViewLogin() {
         initComponents();
     }
@@ -50,13 +53,16 @@ public class ViewLogin extends javax.swing.JFrame{
         jButtonAcessarContar = new javax.swing.JButton();
         botaoCancelar = new javax.swing.JButton();
         botaoCriarConta = new javax.swing.JButton();
+        frameDrag = new javax.swing.JLabel();
+        btnClose = new javax.swing.JLabel();
+        btnMinimize = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(null);
         setName("Login"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(721, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Administrador", "Funcionário", "Condômino", "Inquilino" }));
@@ -101,7 +107,7 @@ public class ViewLogin extends javax.swing.JFrame{
                 jLabelRecuperarSenhaMouseEntered(evt);
             }
         });
-        getContentPane().add(jLabelRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 140, 20));
+        getContentPane().add(jLabelRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 150, 20));
 
         jButtonAcessarContar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonAcessarContar.setText("Acessar");
@@ -137,8 +143,39 @@ public class ViewLogin extends javax.swing.JFrame{
         });
         getContentPane().add(botaoCriarConta, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/background-login.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        frameDrag.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                frameDragMouseDragged(evt);
+            }
+        });
+        frameDrag.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                frameDragMousePressed(evt);
+            }
+        });
+        getContentPane().add(frameDrag, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 10));
+
+        btnClose.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCloseMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 10, 20));
+
+        btnMinimize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMinimize.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMinimizeMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnMinimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 0, 20, 20));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/logo-400.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 12, 376, 376));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/background-login.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -203,6 +240,26 @@ public class ViewLogin extends javax.swing.JFrame{
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void btnCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_btnCloseMouseClicked
+
+    private void btnMinimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMinimizeMouseClicked
+        this.setState(ViewLogin.ICONIFIED);
+    }//GEN-LAST:event_btnMinimizeMouseClicked
+
+    private void frameDragMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frameDragMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_frameDragMouseDragged
+
+    private void frameDragMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frameDragMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY(); 
+    }//GEN-LAST:event_frameDragMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -241,8 +298,12 @@ public class ViewLogin extends javax.swing.JFrame{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCancelar;
     private javax.swing.JButton botaoCriarConta;
+    private javax.swing.JLabel btnClose;
+    private javax.swing.JLabel btnMinimize;
+    private javax.swing.JLabel frameDrag;
     private javax.swing.JButton jButtonAcessarContar;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelRecuperarSenha;
     public javax.swing.JTextField txtCpf;
