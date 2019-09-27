@@ -34,11 +34,10 @@ public class ViewBase extends javax.swing.JFrame {
         backgroundLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(null);
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1024, 568));
         setResizable(false);
-        setSize(new java.awt.Dimension(1024, 578));
+        setSize(new java.awt.Dimension(1024, 568));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnClose.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -70,7 +69,7 @@ public class ViewBase extends javax.swing.JFrame {
         getContentPane().add(frameDrag, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 20));
 
         backgroundLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/background.png"))); // NOI18N
-        getContentPane().add(backgroundLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 580));
+        getContentPane().add(backgroundLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
