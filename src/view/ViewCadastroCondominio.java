@@ -97,7 +97,7 @@ public class ViewCadastroCondominio extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Logradouro" }));
         jComboBox1.setPreferredSize(new java.awt.Dimension(56, 40));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 210, 120, 30));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 210, 120, 30));
 
         jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jTextField2.setText("Nome");

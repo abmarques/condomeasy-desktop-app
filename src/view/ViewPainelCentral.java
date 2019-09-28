@@ -39,7 +39,6 @@ public class ViewPainelCentral extends ViewBase {
         setMaximumSize(new java.awt.Dimension(840, 472));
         setMinimumSize(new java.awt.Dimension(840, 472));
         setName("Home"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1024, 568));
         setSize(new java.awt.Dimension(1024, 568));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

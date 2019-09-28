@@ -18,8 +18,8 @@ public class Run {
      */
     public static void main(String[] args) {
         
-        runViewLogin();
-        //runViewBase();
+        //runViewLogin();
+        runViewBase();
         
     }
     

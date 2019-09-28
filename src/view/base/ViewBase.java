@@ -46,7 +46,7 @@ public class ViewBase extends javax.swing.JFrame {
                 btnCloseMouseClicked(evt);
             }
         });
-        getContentPane().add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 10, 20, 20));
+        getContentPane().add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 0, 20, 30));
 
         btnMinimize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMinimize.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -54,7 +54,7 @@ public class ViewBase extends javax.swing.JFrame {
                 btnMinimizeMouseClicked(evt);
             }
         });
-        getContentPane().add(btnMinimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, 20, 20));
+        getContentPane().add(btnMinimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 0, 20, 30));
 
         frameDrag.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -68,7 +68,7 @@ public class ViewBase extends javax.swing.JFrame {
         });
         getContentPane().add(frameDrag, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 20));
 
-        backgroundLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/background.png"))); // NOI18N
+        backgroundLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/background-large.png"))); // NOI18N
         getContentPane().add(backgroundLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
